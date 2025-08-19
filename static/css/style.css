@@ -1,0 +1,204 @@
+body {
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.wrapper {
+    max-width: 1345px;
+    margin: 0 auto;
+}
+
+/* Header style start */
+
+.header {
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background-color: #181819;
+}
+
+.wrapper-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header-search {
+    display: flex;
+    padding: 2px 16px 2px 2px;
+    width: 540px;
+    height: 50px;
+    background: rgba(250, 250, 255, 0.04);
+    mix-blend-mode: normal;
+    border-radius: 9999px;
+}
+
+.header-search-dropdown {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: rgba(250, 250, 255, 0.04);
+    mix-blend-mode: normal;
+    border: 1px solid rgba(250, 250, 255, 0.04);
+    border-radius: 9999px;
+    margin-right: 16px;
+
+    padding: 11px 18px 9px 21px;
+    width: 150px;
+    height: 46px;
+}
+
+.header-search-button {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-search-button-name {
+    color: white;
+    line-height: 24px;
+    margin-right: 8px;
+}
+
+.header-search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-search-bar-input {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    color: rgb(250, 250, 255, 0.6);
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-nav-item:first-child {
+    margin-right: 52px;
+}
+
+.third-nav-item {
+    margin-left: 42px;
+    margin-right: 42px;
+}
+
+.header-nav-item-name {
+    color: white;
+    line-height: 24px;
+}
+
+.header-nav-item:last-child .header-nav-item-name {
+    background: linear-gradient(79deg, #36D1DC 0%, #5B86E5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-nav-item-icon-video {
+    margin-left: 8px;
+}
+
+.header-nav-item-stars {
+    margin-right: 8px;
+}
+
+.header-nav-item-icon-aistud {
+    margin-left: 8px;
+}
+
+.header-button-SingIn {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 600;
+    color: white;
+    padding: 8px 17px;
+    background: rgba(250, 250, 255, 0.04);
+    border: 1px solid rgba(250, 250, 255, 0.04);
+    border-radius: 8px;
+}
+
+.burger-menu {
+    width: 15px;
+    height: 13px;
+    margin: auto 0;
+    position: relative;
+}
+
+.burger-line {
+    background-color: black;
+    width: 15px;
+    height: 2px;
+}
+
+.burger-line-first {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.burger-line-second {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.burger-line-third {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Header style end */
+
+
+/* Fonts start */
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v19-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/inter-v19-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/inter-v19-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Fonts end */
