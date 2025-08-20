@@ -14,15 +14,23 @@
     <header class="header">
         <div class="wrapper">
             <div class="wrapper-header">
-                <img src="static/img/svg/logo.svg" alt="logo" class="header-logo">
+                <a href="#" class="header-logo-link"><img src="static/img/svg/logo.svg" alt="logo"
+                        class="header-logo"></a>
 
                 <form action="/search" class="header-search">
                     <div class="header-search-dropdown">
-                        <button class="header-search-button">
+                        <button class="header-search-button" type="button">
                             <span class="header-search-button-name">Videos </span>
                             <img src="static/img/svg/headr-serch-button-selector.svg" alt=""
                                 class="header-search-button-icon">
                         </button>
+
+                        <ul class="header-search-menu">
+                            <li data-values="video" class="header-search-menu-item">Videos</li>
+                            <li data-values="music" class="header-search-menu-item">Music</li>
+                            <li data-values="photo" class="header-search-menu-item">Photo</li>
+                        </ul>
+
                     </div>
 
 
@@ -66,7 +74,7 @@
 
             </div>
         </div>
-        <hr class="divider">
+        <hr class="header-divider">
     </header>
 
     <main class="main">
@@ -145,7 +153,7 @@
             </div>
         </section>
     </main>
-
+    <script src="./static/js/main.js"></script>
 </body>
 
 </html>
