@@ -3,15 +3,46 @@ const button = dropdown.querySelector('.header-search-button');
 const buttonName = button.querySelector('.header-search-button-name');
 const menu = dropdown.querySelector('.header-search-menu');
 const hiddenInput = document.querySelector('input[name="type"]');
+const menuItems = menu.querySelectorAll('li');
+
+
+function updateSelectedItem(selectedItem) {
+    menuItems.forEach(item => {
+        item.classList.remove('selected');
+    });
+    
+    selectedItem.classList.add('selected');
+    
+    buttonName.textContent = selectedItem.textContent; 
+    hiddenInput.value = selectedItem.dataset.value;
+    
+    dropdown.classList.remove('open');
+}
+
+function initSelectedItem() {
+    const defaultItem = Array.from(menuItems).find(item => 
+        item.dataset.value === 'video' || item.textContent.trim() === 'Videos'
+    );
+    
+    if (defaultItem) {
+        updateSelectedItem(defaultItem);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initSelectedItem);
 
 button.addEventListener('click', () => {
-  dropdown.classList.toggle('open');
+    dropdown.classList.toggle('open');
 });
 
-menu.querySelectorAll('li').forEach(item => {
-  item.addEventListener('click', () => {
-    buttonName.textContent = item.textContent;       // меняем текст кнопки
-    hiddenInput.value = item.dataset.value;          // обновляем input
-    dropdown.classList.remove('open');               // закрываем меню
-  });
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        updateSelectedItem(item);
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+    }
 });
